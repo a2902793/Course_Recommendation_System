@@ -4,10 +4,10 @@ from progress.bar import Bar
 import xlsxwriter
 
 directory = './dataset'
-# print(len(fnmatch.filter(os.listdir(directory), '*.pdf'))) = 4371
+# print(len(fnmatch.filter(os.listdir(directory), '*.pdf'))) = 4372
 
 start_time = time.time()
-with Bar('Processing', max=4284) as bar: #max=4371
+with Bar('Processing', max=4284) as bar: #max=4372
     for filename in sorted(os.listdir(directory)):
         pdfpath=os.path.join(directory, filename) #./testset/ + 0001.pdf
         tables = camelot.read_pdf(pdfpath, pages='1-end', flavor='lattice')
